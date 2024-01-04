@@ -1,0 +1,52 @@
+<div class="outer">
+    <div class="card">
+
+        <div class="card-title">
+            <div class="text-center" id="cardTitle">
+                <h1>Login!</h1>
+            </div>
+        </div>
+
+       <div class="panel-body p-3">
+            <form id="formInput" [formGroup]="loginForm">
+                <div class="form-group pt-3">
+                    <div class="input-field"  [class.error]="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">
+                        <span class="fa-solid fa-user"></span>
+                        <input formControlName="username" type="text" placeholder="Enter Your Username...">
+                    </div>
+                </div>
+                <small class="text-danger" *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">*Username is required</small>
+                <div class="form-group pt-3">
+                    <div class="input-field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
+                        <span class="fa-sharp fa-solid fa-lock"></span>
+                        <input formControlName="password" [type]="type" placeholder="Enter Your Password...">
+                        <span (click)="hideShowPass()" class="{{eyeIcon}}" id="eye"></span>
+                    </div>
+                </div>
+                <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+            </form>
+       </div>
+
+       <div class="forget-password">
+            <a href="" id="forget">Forgotten Password?</a>
+       </div>
+       
+       <div class="btn">
+            <button (click)="loginBtn()" class="btn btn-primary" type="submit">Login</button>
+       </div>
+
+
+       <div class="sign-up">
+            <div class="text-center">
+                <p>Don't have an account <a routerLink="/signup-page">Sign Up!</a></p>
+            </div>
+       </div>
+
+
+       <div class="icons">
+            <a href="https://www.instagram.com/abukh_20" class="fa-brands fa-instagram"></a>
+            <a class="fa-brands fa-twitter" href="https://www.twitter.com"></a>
+            <a class="fa-brands fa-github" href="https://www.github.com"></a>
+       </div>
+    </div>
+</div>

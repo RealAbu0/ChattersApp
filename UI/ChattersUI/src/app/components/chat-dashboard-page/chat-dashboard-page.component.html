@@ -1,0 +1,72 @@
+<div class="outer">
+
+
+
+    <div class="logOutBtn">
+        <button class="btn btn-primary" (click)="signOutBtn()"><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </div>
+
+    <div class="card" id="card1">
+        <div class="card-title">
+            <h1>Chat Dashboard</h1>
+        </div>
+
+      
+
+        <!-- Button Options -->
+        <div class="options">
+            <div class="card" id="card2">
+                <div class="card-title">
+                    <h1>Group Chat</h1>
+                </div>
+
+                <!-- Create Button -->
+                <div class="btns_1">
+                    <button type="button" class="btn btn-primary" (click)="createBtn()">Create</button>
+                </div>
+
+                <!-- Join Button trigger modal -->
+                <div class="btns_2">
+                    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">Join</button>
+                </div>
+
+             
+            </div>
+        </div>
+
+
+       
+
+    </div>
+
+
+     <!-- Modal -->
+     <form [formGroup]="values">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Enter A Room ID</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Enter A Room Id To Join..." class="form-control" formControlName="roomCode">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="joinBtn()">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+
+
+
+
+  
+
+

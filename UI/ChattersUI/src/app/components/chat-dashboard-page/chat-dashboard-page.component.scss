@@ -1,0 +1,67 @@
+.outer{
+    background: linear-gradient(red 10%, white 90%);
+    height: 100vh;
+}
+
+.logOutBtn{
+    float: right;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.logOutBtn button{
+    height: 80px;
+    width: 180px;
+    font-size: 30px;
+}
+
+#card1 .card-title{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#card1{
+    top: 50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    padding: 50px;
+    background: linear-gradient(red 10%, white 90%);
+    height: 500px;
+}
+
+#card2{
+    margin-top: 15px;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(blue 10%, white 90%);
+}
+
+#card2 .card-title{
+    margin: 5px 0px;
+}
+
+#card2 .btns_1, .btns_2{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#card2 button{
+    width: 100px;
+    border-radius: 1deg;
+}
+
+#card2 button:hover{
+    background: linear-gradient(90deg, blue 4%, red 100%);
+}
+
+#exampleModal{
+    margin-top: 250px;
+    height: 450px;
+}
+
+#exampleModal .modal-footer button{
+    width: 100px;
+}
+
